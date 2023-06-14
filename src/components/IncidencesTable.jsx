@@ -6,7 +6,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useState,useEffect  } from "react";
-import axios from 'axios';
+import axios from '../utils/AxiosInstance';
 import { Fab } from '@mui/material';
 import { EditRounded } from '@mui/icons-material';
 import TablePagination from '@mui/material/TablePagination';
@@ -36,7 +36,7 @@ export default function IncidencesTable(){
         if(role === 'PROFESOR'){
           axios({
             method: 'GET',
-            url: baseURL + '/api/user/incidences',
+            url: '/back/public/api/user/incidences',
             params: {
               user_id: sessionStorage.getItem('user_id'),
             },
@@ -57,7 +57,7 @@ export default function IncidencesTable(){
 
           axios({
             method: 'GET',
-            url: baseURL + '/api/incidences',
+            url: '/back/public/api/incidences',
             headers: {
               'Accept': 'application/json, text/plain, */*',
               'Content-Type': 'application/x-www-form-urlencoded',
@@ -74,7 +74,7 @@ export default function IncidencesTable(){
         }else if(role === 'COORDINADOR TIC'){
           axios({
             method: 'GET',
-            url: baseURL + '/api/tic/incidences',
+            url: '/back/public/api/tic/incidences',
             headers: {
               'Accept': 'application/json, text/plain, */*',
               'Content-Type': 'application/x-www-form-urlencoded',

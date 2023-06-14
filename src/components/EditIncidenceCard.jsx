@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../utils/AxiosInstance';
 import './css/Card.css';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -27,7 +27,7 @@ export default function EditIncidenceCard() {
 
             axios({
                 method: 'GET',
-                url: baseURL + '/api/incidences/'+ editParams.incidenceId,
+                url: '/back/public/api/incidences/'+ editParams.incidenceId,
                 headers: {
                   'Accept': 'application/json, text/plain, */*',
                   'Content-Type': 'application/x-www-form-urlencoded',

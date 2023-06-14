@@ -3,7 +3,7 @@ import './css/NavBar.css';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import { useState } from 'react';
-import axios from 'axios';
+import axios from '../utils/AxiosInstance';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 const token = sessionStorage.getItem('user_token');
@@ -16,7 +16,7 @@ export function getTaughtCSV(){
     headers: {
       'Accept': 'application/json, text/plain, */*',
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': 'Bearer ' + token,
+      'Authorization': 'Bearer ' + sessionStorage.getItem('user_token'),
       responseType: 'blob'
     },
   }).then(response =>{
@@ -44,7 +44,7 @@ export function getReviews(){
     headers: {
       'Accept': 'application/json, text/plain, */*',
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': 'Bearer ' + token,
+      'Authorization': 'Bearer ' + sessionStorage.getItem('user_token'),
       responseType: 'blob'
     },
   }).then(response =>{
@@ -71,7 +71,7 @@ export function getEnrolleds(){
     headers: {
       'Accept': 'application/json, text/plain, */*',
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': 'Bearer ' + token,
+      'Authorization': 'Bearer ' + sessionStorage.getItem('user_token'),
       responseType: 'blob'
     },
   }).then(response =>{
@@ -111,7 +111,7 @@ export default function NavBar() {
         headers: {
           'Accept': 'application/json, text/plain, */*',
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': 'Bearer ' + token,
+          'Authorization': 'Bearer ' + sessionStorage.getItem('user_token'),
         },
       }).then(response =>{
        
@@ -147,7 +147,7 @@ export default function NavBar() {
       headers: {
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Bearer ' + token,
+        'Authorization': 'Bearer ' + sessionStorage.getItem('user_token'),
         responseType: 'blob'
       },
     }).then(response =>{
@@ -175,7 +175,7 @@ export default function NavBar() {
       headers: {
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Bearer ' + token,
+        'Authorization': 'Bearer ' + sessionStorage.getItem('user_token'),
         responseType: 'blob'
       },
     }).then(response =>{
@@ -202,7 +202,7 @@ export default function NavBar() {
       headers: {
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Bearer ' + token,
+        'Authorization': 'Bearer ' + sessionStorage.getItem('user_token'),
         responseType: 'blob'
       },
     }).then(response =>{
@@ -237,7 +237,7 @@ export default function NavBar() {
           headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Authorization': 'Bearer ' + token,
+            'Authorization': 'Bearer ' + sessionStorage.getItem('user_token'),
           },
         }).then(response =>{
             window.alert('Se ha iniciado el nuevo curso')

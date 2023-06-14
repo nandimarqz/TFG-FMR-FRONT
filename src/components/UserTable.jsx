@@ -6,7 +6,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useState,useEffect  } from "react";
-import axios from 'axios';
+import axios from '../utils/AxiosInstance';
 import { Fab } from '@mui/material';
 import { EditRounded } from '@mui/icons-material';
 import TablePagination from '@mui/material/TablePagination';

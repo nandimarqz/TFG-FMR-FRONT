@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '../utils/AxiosInstance';
 import './css/Card.css';
 import userscsv from '../data/Profesores.csv'
 

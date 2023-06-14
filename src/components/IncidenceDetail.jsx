@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '../utils/AxiosInstance';
 import { useParams } from 'react-router-dom';
 import './css/Card.css';
 import InputLabel from '@mui/material/InputLabel';

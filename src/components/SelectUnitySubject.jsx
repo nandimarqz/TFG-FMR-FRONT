@@ -1,5 +1,5 @@
     import { useState, useEffect } from 'react';
-    import axios from 'axios';
+    import axios from '../utils/AxiosInstance';
     import './css/Card.css';
     import { useNavigate } from "react-router-dom";
     import { useTheme } from '@emotion/react';

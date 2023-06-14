@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import logoTransparente from '../img/escudo_transparent.png'
 import { MenuItem, Select } from '@mui/material';
 import { useEffect } from 'react';
-import axios from 'axios';
+import axios from '../utils/AxiosInstance';
 import { useNavigate } from "react-router-dom";
 import TextField from '@mui/material/TextField/TextField';
 
@@ -26,7 +26,7 @@ function LoginForm() {
       //   credentials: 'include'
       // })
 
-    axios.get(baseURL + '/sanctum/csrf-cookie',{withCredentials:true})
+    axios.get('/back/public/sanctum/csrf-cookie',{withCredentials:true})
     
     }
     getCsrfCookie();
@@ -46,7 +46,7 @@ function LoginForm() {
 
   const handleSubmit =  (event) => {
     event.preventDefault();
-    axios.post(baseURL+'/api/login', {
+    axios.post('/back/public/api/login', {
       email: email,
       password: password,
       role:role
