@@ -1,0 +1,10 @@
+.card-body img{
+    
+    width:1.2rem !important;
+    line-height: 100px !important;
+}
+.card{
+
+    height: fit-content !important;
+
+}

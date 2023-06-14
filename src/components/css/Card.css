@@ -1,0 +1,49 @@
+.card-header{
+
+    background-color: #007932;
+
+}
+
+.card button{
+
+    background-color: #368f3f !important;
+    border: #2e2925 !important;
+}
+
+input[type="button"]{
+
+    background-color: #368f3f !important;
+    border: #2e2925 !important;
+    color: white;
+    
+}
+
+input[type="button"]:hover{
+
+    background-color: #368f3f !important;
+    border: #2e2925 !important;
+    color: white;
+}
+
+#createReview button{
+
+    background-color: #368f3f !important;
+    border: #2e2925 !important;
+
+}
+
+
+.form-control:focus, .form-select:focus, .form-check-input:focus{
+
+    border-color: #368f3f !important;
+    box-shadow: 0 1px 1px #007932 inset, 0 0 8px #007932 !important;
+    outline: 0 none !important;
+
+}
+
+textarea:focus{
+
+    border-color: #368f3f!important;
+    box-shadow: 0 1px 1px #007932 inset, 0 0 8px #007932 !important;
+    outline: 0 none !important;
+}

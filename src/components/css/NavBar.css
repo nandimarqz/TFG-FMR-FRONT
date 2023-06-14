@@ -1,0 +1,24 @@
+#nav{
+
+    background-color: #007932;
+    font-size: 0.9rem !important;
+}
+
+#nav .nav-link{
+
+    color: #ffff;
+
+}
+
+.navbar-toggler-icon{
+
+    background-image: url('../../img/menu-hamburguesa\ \(1\).svg') !important;
+    
+
+}
+
+html, #root{
+
+    font-family:'Noto Sans HK' ;
+
+}

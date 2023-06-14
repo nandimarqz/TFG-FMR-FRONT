@@ -1,0 +1,11 @@
+#login-root{
+    background-image: url('../../img/palataformas-educativas-para-ninos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#div-login{
+
+    background-color: #ffff;
+    width: 45rem;
+}
